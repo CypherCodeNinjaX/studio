@@ -8,7 +8,6 @@ const syllabus = {
   ],
   lab: [
     { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: '#' },
-    { title: 'Physics II Lab (PH291)', code: 'PH291', format: 'PPT', fileUrl: '#' },
   ],
 };
 
