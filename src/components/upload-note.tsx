@@ -19,6 +19,16 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Upload } from 'lucide-react';
 
+const ACCEPTED_FILE_TYPES = [
+  'application/pdf',
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'application/vnd.ms-powerpoint',
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+];
+
 const formSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters.'),
   author: z.string().min(3, 'Author name must be at least 3 characters.'),
@@ -26,6 +36,11 @@ const formSchema = z.object({
   file: z
     .any()
     .refine((files) => files?.length === 1, 'File is required.')
+    .refine((files) => files?.[0]?.size <= 10000000, `Max file size is 10MB.`)
+    .refine(
+      (files) => ACCEPTED_FILE_TYPES.includes(files?.[0]?.type),
+      'Only .pdf, .doc, .docx, .xls, .xlsx, .ppt, and .pptx files are accepted.'
+    ),
 });
 
 export function UploadNote() {
@@ -81,7 +96,7 @@ export function UploadNote() {
         <DialogHeader>
           <DialogTitle>Upload a New Note</DialogTitle>
           <DialogDescription>
-            Fill in the details below and select a file to upload.
+            Fill in the details below and select a file to upload. Accepted formats: PDF, Word, Excel, PPT.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -132,7 +147,11 @@ export function UploadNote() {
                 <FormItem>
                   <FormLabel>File</FormLabel>
                   <FormControl>
-                    <Input type="file" {...fileRef} />
+                    <Input 
+                      type="file" 
+                      {...fileRef} 
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
