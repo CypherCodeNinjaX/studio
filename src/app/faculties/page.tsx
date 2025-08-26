@@ -20,12 +20,12 @@ const faculties = [
     email: 'subarna.datta@iem.edu.in',
   },
   {
-    name: 'Dr. Priya Sharma',
-    designation: 'Assistant Professor',
-    qualification: 'Ph.D. in Optics & Photonics',
-    experience: '10 Years',
-    researchArea: ['Fiber Optics', 'Laser Physics'],
-    email: 'priya.sharma@iem.edu.in',
+    name: 'Prof. Dr. Soumyadipta Pal',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D',
+    experience: '9 years',
+    researchArea: ['Condensed Matter Physics and Material Science'],
+    email: 'soumyadipta.pal@iem.edu.in',
   },
   {
     name: 'Dr. Rajesh Kumar',
