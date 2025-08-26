@@ -84,12 +84,12 @@ const faculties = [
     email: '',
   },
   {
-    name: 'Dr. Neha Kapoor',
+    name: 'Prof. Sangeeta Das (SND)',
     designation: 'Professor',
-    qualification: 'Ph.D. in Medical Physics',
-    experience: '10 Years',
-    researchArea: ['Radiation Therapy', 'Medical Imaging'],
-    email: 'neha.kapoor@iem.edu.in',
+    qualification: '',
+    experience: '--',
+    researchArea: ['--'],
+    email: '',
   },
 ];
 
