@@ -20,7 +20,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/20 flex flex-col items-center justify-center text-center p-4">
           <div className="flex items-center gap-4 mb-4">
-            <IEMLogo className="w-16 h-16 text-primary-foreground" />
+            <IEMLogo className="w-16 h-16" />
             <UEMLogo className="w-16 h-16 text-primary-foreground" />
           </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary-foreground drop-shadow-lg">

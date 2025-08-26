@@ -1,19 +1,28 @@
+import Image from 'next/image';
 import React from 'react';
 
-export function IEMLogo(props: React.SVGProps<SVGSVGElement>) {
+// This is a placeholder as direct Google Drive links are not ideal for production.
+// It's recommended to host the logo on a proper CDN or within the project's public directory.
+const iemLogoUrl = 'https://drive.google.com/uc?export=download&id=1IYy6ly8vBTu3yapNHOOYQTGNfs3LgRvo';
+
+export function IEMLogo(props: React.ComponentProps<'img'>) {
+  // The 'as' prop isn't standard for img, so we extract className and other props
+  const { className, ...rest } = props;
+  
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <circle cx="12" cy="12" r="10" fill="currentColor" stroke="none" />
-      <text x="50%" y="50%" textAnchor="middle" dy=".3em" fontSize="8" fill="var(--sidebar-background)" className="font-headline font-bold">IEM</text>
-    </svg>
+    <div className={cn('relative', className)} style={{ width: props.width, height: props.height }}>
+       <Image
+        src={iemLogoUrl}
+        alt="IEM Logo"
+        layout="fill"
+        objectFit="contain"
+        {...rest}
+      />
+    </div>
   );
+}
+
+// Helper function to combine class names
+function cn(...classes: (string | undefined | null | false)[]) {
+  return classes.filter(Boolean).join(' ');
 }
