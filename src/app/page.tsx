@@ -26,9 +26,6 @@ export default function Home() {
           <h1 className="font-headline text-4xl md:text-6xl font-bold text-primary-foreground drop-shadow-lg">
             Welcome to the IEM Physics App
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-primary-foreground/90 max-w-3xl">
-            Your comprehensive resource for physics syllabus, notes, experiments, and faculty information at IEM.
-          </p>
         </div>
       </section>
 
