@@ -33,7 +33,7 @@ const experiments = [
     {
       title: "Carey Foster's Bridge",
       description: "To determine the resistance per unit length of a given bridge wire and hence to determine the very low unknown resistance by using Carey Foster's bridge.",
-      youtubeUrl: 'https://www.youtube.com/watch?v=P2w51Tf9F8Q',
+      youtubeUrl: 'https://yt.openinapp.co/51cp9',
     },
     {
       title: 'Modulus of Rigidity (Static)',
