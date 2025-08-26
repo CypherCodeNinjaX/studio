@@ -60,12 +60,12 @@ const faculties = [
     email: 'sayan.paul@iem.edu.in',
   },
   {
-    name: 'Dr. Vijay Singh',
-    designation: 'Associate Professor',
-    qualification: 'Ph.D. in Plasma Physics',
-    experience: '9 Years',
-    researchArea: ['Fusion Energy', 'Plasma Diagnostics'],
-    email: 'vijay.singh@iem.edu.in',
+    name: 'Mr. Amit Nandi',
+    designation: 'Senior Technical Assistant',
+    qualification: 'M.Sc.',
+    experience: '11 years',
+    researchArea: ['--'],
+    email: 'amit.nandi@iem.edu.in',
   },
   {
     name: 'Prof. Ritu Bose',
