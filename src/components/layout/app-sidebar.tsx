@@ -24,7 +24,7 @@ export function AppSidebar() {
       <SidebarHeader className="p-4">
         <Link href="/" className="flex items-center gap-2">
           <IEMLogo className="h-8 w-8 text-sidebar-foreground" />
-          <h1 className="font-headline text-lg font-semibold text-sidebar-foreground">IEM Physics</h1>
+          <h1 className="font-headline text-lg font-semibold text-sidebar-foreground">IEM PHYSICS APP</h1>
         </Link>
       </SidebarHeader>
       <SidebarMenu>
