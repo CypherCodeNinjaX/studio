@@ -8,8 +8,8 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="space-y-8 animate-fade-in-up">
-      <section className="relative w-full h-[50vh] rounded-lg overflow-hidden shadow-lg">
+    <div className="space-y-8">
+      <section className="relative w-full h-[50vh] rounded-lg overflow-hidden shadow-lg animate-fade-in-up">
         <Image
           src="https://picsum.photos/1200/800"
           alt="Abstract physics background"
@@ -29,13 +29,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center space-y-2">
+      <section className="text-center space-y-2 animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight">INSTITUTE OF ENGINEERING AND MANAGEMENT, SALT LAKE SECTOR V</h2>
         <h3 className="text-xl md:text-2xl font-semibold text-primary">PHYSICS(BSCPH101)</h3>
         <h4 className="text-lg md:text-xl text-muted-foreground">Department of Basic Science and Humanities</h4>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
         <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
           <CardHeader>
             <CardTitle className="font-headline">Faculty Profiles</CardTitle>

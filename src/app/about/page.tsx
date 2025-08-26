@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-8 animate-fade-in-up">
-      <Card>
+    <div className="space-y-8">
+      <Card className="animate-fade-in-up">
         <CardHeader>
           <CardTitle className="font-headline text-3xl">About the Department</CardTitle>
         </CardHeader>
@@ -18,7 +18,7 @@ export default function AboutPage() {
         </CardContent>
       </Card>
       
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-8 items-center animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <Card>
           <CardHeader>
             <CardTitle className="font-headline text-2xl">Our Mission</CardTitle>
@@ -34,7 +34,7 @@ export default function AboutPage() {
         </div>
       </div>
       
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+      <div className="grid md:grid-cols-2 gap-8 items-center animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
         <div className="rounded-lg overflow-hidden shadow-lg order-last md:order-first">
           <Image src="https://storage.googleapis.com/aifire-us-app-sandbox-dev-02-a/user-assets/e2b26c71-26c7-4603-96e0-94d7b7c53e8d_optim_4096.jpg" alt="IEM basketball court" data-ai-hint="basketball court" width={600} height={400} className="w-full h-auto object-cover" />
         </div>

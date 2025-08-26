@@ -89,13 +89,16 @@ const experiments = [
 
 export default function LabExperimentsPage() {
   return (
-    <div className="space-y-8 animate-fade-in-up">
-      <SemanticSearch
-        documentType="labExperiments"
-        placeholder="e.g., Young's double slit, Hall effect..."
-      />
+    <div className="space-y-8">
+      <div className="animate-fade-in-up">
+        <SemanticSearch
+          documentType="labExperiments"
+          placeholder="e.g., Young's double slit, Hall effect..."
+        />
+      </div>
 
-      <div>
+
+      <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-headline text-2xl font-bold">Lab Experiments</h2>
           <Button asChild>

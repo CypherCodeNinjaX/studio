@@ -13,8 +13,8 @@ const syllabus = {
 
 export default function SyllabusPage() {
   return (
-    <div className="space-y-8 animate-fade-in-up">
-      <div>
+    <div className="space-y-8">
+      <div className="animate-fade-in-up">
         <h2 className="font-headline text-2xl font-bold mb-4">Theory Syllabus</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {syllabus.theory.map((doc) => (
@@ -38,7 +38,7 @@ export default function SyllabusPage() {
           ))}
         </div>
       </div>
-      <div>
+      <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <h2 className="font-headline text-2xl font-bold mb-4">Lab Syllabus</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {syllabus.lab.map((doc) => (

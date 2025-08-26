@@ -3,8 +3,8 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div className="grid md:grid-cols-2 gap-8 animate-fade-in-up">
-      <Card>
+    <div className="grid md:grid-cols-2 gap-8">
+      <Card className="animate-fade-in-up">
         <CardHeader>
           <CardTitle className="font-headline text-2xl">Get in Touch</CardTitle>
         </CardHeader>
@@ -41,7 +41,7 @@ export default function ContactPage() {
         </CardContent>
       </Card>
       
-      <Card className="h-full min-h-[400px]">
+      <Card className="h-full min-h-[400px] animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
          <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.237229560136!2d88.42858541543789!3d22.57037093863795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275f3a9a135a5%3A0x6645380556f8749a!2sInstitute%20of%20Engineering%20%26%20Management%20(IEM)!5e0!3m2!1sen!2sin!4v1678886456789"
           width="100%"

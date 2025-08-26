@@ -13,13 +13,15 @@ const notes: any[] = [
 
 export default function NotesPage() {
   return (
-    <div className="space-y-8 animate-fade-in-up">
-      <SemanticSearch 
-        documentType="notes"
-        placeholder="e.g., Maxwell's equations, Schrodinger's cat..."
-      />
+    <div className="space-y-8">
+      <div className="animate-fade-in-up">
+        <SemanticSearch 
+          documentType="notes"
+          placeholder="e.g., Maxwell's equations, Schrodinger's cat..."
+        />
+      </div>
 
-      <div>
+      <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <div className="flex justify-between items-center mb-4">
           <h2 className="font-headline text-2xl font-bold">Available Notes</h2>
           <UploadNote />
