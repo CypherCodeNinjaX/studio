@@ -10,6 +10,7 @@ const pageTitles: { [key: string]: string } = {
   '/faculties': 'Our Faculties',
   '/syllabus': 'Syllabus',
   '/notes': 'Notes & Materials',
+  '/assignments': 'Assignments',
   '/lab-experiments': 'Lab Experiments',
   '/contact': 'Contact Us',
 };

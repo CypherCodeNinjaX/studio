@@ -26,11 +26,14 @@ export default function NotesPage() {
       <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
         <Tabs defaultValue="theory">
           <div className="flex justify-between items-center mb-4">
-            <TabsList>
-              <TabsTrigger value="theory">Theory Notes</TabsTrigger>
-              <TabsTrigger value="lab">Laboratory Notes</TabsTrigger>
-            </TabsList>
-            <UploadNote />
+            <h1 className="font-headline text-3xl font-bold">Notes & Materials</h1>
+            <div className="flex items-center gap-4">
+               <TabsList>
+                <TabsTrigger value="theory">Theory Notes</TabsTrigger>
+                <TabsTrigger value="lab">Laboratory Notes</TabsTrigger>
+              </TabsList>
+              <UploadNote />
+            </div>
           </div>
           <TabsContent value="theory">
             <Card>
@@ -57,7 +60,9 @@ export default function NotesPage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-muted-foreground">No theory notes have been uploaded yet.</p>
+                   <div className="text-center py-12">
+                     <p className="text-muted-foreground">No theory notes have been uploaded yet.</p>
+                   </div>
                 )}
               </CardContent>
             </Card>
@@ -87,7 +92,9 @@ export default function NotesPage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="text-muted-foreground">No laboratory notes have been uploaded yet.</p>
+                  <div className="text-center py-12">
+                    <p className="text-muted-foreground">No laboratory notes have been uploaded yet.</p>
+                  </div>
                 )}
               </CardContent>
             </Card>

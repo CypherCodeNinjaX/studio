@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users, Globe } from 'lucide-react';
+import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users, Globe, ClipboardList } from 'lucide-react';
 import { Sidebar, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
 import { IEMLogo } from '@/components/iem-logo';
 
@@ -12,6 +12,7 @@ const menuItems = [
   { href: '/faculties', label: 'Faculties', icon: Users },
   { href: '/syllabus', label: 'Syllabus', icon: BookText },
   { href: '/notes', label: 'Notes', icon: Notebook },
+  { href: '/assignments', label: 'Assignments', icon: ClipboardList },
   { href: '/lab-experiments', label: 'Lab Experiments', icon: FlaskConical },
   { href: '/contact', label: 'Contact', icon: Mail },
   { href: 'https://iem.edu.in/', label: 'Official Website', icon: Globe },
