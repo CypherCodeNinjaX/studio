@@ -8,7 +8,7 @@ const experiments = [
     {
       title: "Newton's Ring",
       description: "Determine the radius of curvature of a Plano-convex lens by formation of Newton's ring.",
-      youtubeUrl: 'https://www.youtube.com/watch?v=k3g0f_y-L2c',
+      youtubeUrl: 'https://yt.openinapp.co/6ed7e',
     },
     {
       title: 'Diffraction Grating',
