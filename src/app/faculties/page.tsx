@@ -69,10 +69,10 @@ const faculties = [
   },
   {
     name: 'Prof. Kaustav Pal',
-    designation: '',
+    designation: 'Professor',
     qualification: '',
-    experience: '',
-    researchArea: [],
+    experience: '--',
+    researchArea: ['--'],
     email: '',
   },
   {
