@@ -29,6 +29,12 @@ const ACCEPTED_FILE_TYPES = [
   'application/pdf',
   'application/msword',
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  'application/vnd.ms-excel',
+  'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  'application/vnd.ms-powerpoint',
+  'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+  'image/jpeg',
+  'image/png',
 ];
 
 const formSchema = z.object({
@@ -41,7 +47,7 @@ const formSchema = z.object({
     .refine((files) => files?.[0]?.size <= 10000000, `Max file size is 10MB.`)
     .refine(
       (files) => ACCEPTED_FILE_TYPES.includes(files?.[0]?.type),
-      'Only .pdf, .doc, and .docx files are accepted.'
+      'Only .pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .jpeg, .jpg, and .png files are accepted.'
     ),
 });
 
@@ -97,7 +103,7 @@ export function UploadAssignment() {
         <DialogHeader>
           <DialogTitle>Upload a New Assignment</DialogTitle>
           <DialogDescription>
-            Fill in the details below and select a file to upload.
+            Fill in the details below and select a file to upload. Accepted formats: PDF, Word, Excel, PPT, JPG, PNG.
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -179,7 +185,7 @@ export function UploadAssignment() {
                     <Input 
                       type="file" 
                       {...fileRef} 
-                      accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation,image/jpeg,image/png"
                     />
                   </FormControl>
                    <FormMessage />
