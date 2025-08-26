@@ -1,7 +1,7 @@
 import { SemanticSearch } from '@/components/semantic-search';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Link as LinkIcon } from 'lucide-react';
+import { FlaskConical, Link as LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 
 const experiments = [
@@ -96,7 +96,15 @@ export default function LabExperimentsPage() {
       />
 
       <div>
-        <h2 className="font-headline text-2xl font-bold mb-4">Lab Experiments</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-headline text-2xl font-bold">Lab Experiments</h2>
+          <Button asChild>
+            <a href="https://vlab.amrita.edu/?sub=1" target="_blank" rel="noopener noreferrer">
+              <FlaskConical className="mr-2 h-4 w-4" />
+              Virtual Lab
+            </a>
+          </Button>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiments.map((exp, index) => (
             <Card key={index} className="overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
