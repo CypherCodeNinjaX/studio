@@ -36,12 +36,12 @@ const faculties = [
     email: 'arnab.basu@iem.edu.in',
   },
   {
-    name: 'Dr. Meena Iyer',
-    designation: 'Professor',
-    qualification: 'Ph.D. in Astrophysics',
-    experience: '11 Years',
-    researchArea: ['Stellar Evolution', 'Black Holes'],
-    email: 'meena.iyer@iem.edu.in',
+    name: 'Prof. Dr. Ranabir Banik',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D',
+    experience: '5 years',
+    researchArea: ['Nuclear Structure Physics', 'Gamma Ray Spectroscopy', 'Semiconductor detectors'],
+    email: 'ranabir.banik@iem.edu.in',
   },
   {
     name: 'Prof. Alok Nath',
