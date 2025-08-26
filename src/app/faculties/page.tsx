@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, User } from 'lucide-react';
+import { Mail, User, MoreVertical, Pencil, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 const faculties = [
   {
@@ -99,10 +101,28 @@ export default function FacultiesPage() {
       {faculties.map((faculty, index) => (
         <Card
           key={index}
-          className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in-up"
+          className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in-up relative group"
           style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
         >
-          <CardHeader className="text-center flex-grow items-center">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="absolute top-4 right-4 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                <MoreVertical className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem>
+                <Pencil className="mr-2 h-4 w-4" />
+                <span>Edit</span>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="text-destructive">
+                <Trash2 className="mr-2 h-4 w-4" />
+                <span>Delete</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <CardHeader className="text-center flex-grow items-center pt-6">
             <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4">
               <User className="w-16 h-16 text-muted-foreground" />
             </div>

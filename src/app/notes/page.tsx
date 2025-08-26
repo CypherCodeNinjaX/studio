@@ -1,8 +1,11 @@
 import { SemanticSearch } from '@/components/semantic-search';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { NotebookText } from 'lucide-react';
+import { NotebookText, MoreVertical, Pencil, Trash2 } from 'lucide-react';
 import { UploadNote } from '@/components/upload-note';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+
 
 const theoryNotes: any[] = [
   // { title: 'Introduction to Electrodynamics', author: 'Dr. Anirban Ghosh', topic: 'Electromagnetism' },
@@ -45,9 +48,26 @@ export default function NotesPage() {
                 {theoryNotes.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {theoryNotes.map((note, index) => (
-                      <Card key={index} className="hover:shadow-lg transition-shadow">
+                      <Card key={index} className="hover:shadow-lg transition-shadow relative group">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button variant="ghost" size="icon" className="absolute top-4 right-4 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                              <MoreVertical className="h-4 w-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end">
+                            <DropdownMenuItem>
+                              <Pencil className="mr-2 h-4 w-4" />
+                              <span>Edit</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="text-destructive">
+                              <Trash2 className="mr-2 h-4 w-4" />
+                              <span>Delete</span>
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                         <CardHeader>
-                          <div className="flex items-start justify-between">
+                          <div className="flex items-start justify-between pr-10">
                             <CardTitle>{note.title}</CardTitle>
                             <NotebookText className="w-6 h-6 text-muted-foreground"/>
                           </div>
@@ -77,9 +97,26 @@ export default function NotesPage() {
                 {labNotes.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {labNotes.map((note, index) => (
-                      <Card key={index} className="hover:shadow-lg transition-shadow">
+                      <Card key={index} className="hover:shadow-lg transition-shadow relative group">
+                        <DropdownMenu>
+                          <DropdownMenuTrigger asChild>
+                            <Button variant="ghost" size="icon" className="absolute top-4 right-4 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
+                              <MoreVertical className="h-4 w-4" />
+                            </Button>
+                          </DropdownMenuTrigger>
+                          <DropdownMenuContent align="end">
+                            <DropdownMenuItem>
+                              <Pencil className="mr-2 h-4 w-4" />
+                              <span>Edit</span>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem className="text-destructive">
+                              <Trash2 className="mr-2 h-4 w-4" />
+                              <span>Delete</span>
+                            </DropdownMenuItem>
+                          </DropdownMenuContent>
+                        </DropdownMenu>
                         <CardHeader>
-                          <div className="flex items-start justify-between">
+                          <div className="flex items-start justify-between pr-10">
                             <CardTitle>{note.title}</CardTitle>
                             <NotebookText className="w-6 h-6 text-muted-foreground"/>
                           </div>
