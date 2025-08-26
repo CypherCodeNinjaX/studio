@@ -29,6 +29,12 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="text-center space-y-2">
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight">INSTITUTE OF ENGINEERING AND MANAGEMENT, SALT LAKE SECTOR V</h2>
+        <h3 className="text-xl md:text-2xl font-semibold text-primary">PHYSICS(BSCPH101)</h3>
+        <h4 className="text-lg md:text-xl text-muted-foreground">Department of Basic Science and Humanities</h4>
+      </section>
+
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card className="hover:shadow-lg transition-shadow duration-300">
           <CardHeader>
