@@ -6,8 +6,8 @@ import { AppSidebar } from '@/components/layout/app-sidebar';
 import { AppHeader } from '@/components/layout/app-header';
 
 export const metadata: Metadata = {
-  title: 'IEM Physics Guide',
-  description: 'A comprehensive guide to Physics at IEM.',
+  title: 'IEM Physics App',
+  description: 'A comprehensive app for Physics at IEM.',
 };
 
 export default function RootLayout({
