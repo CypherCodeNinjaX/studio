@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Mail, User, Pencil, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const faculties = [
   {
@@ -11,6 +12,7 @@ const faculties = [
     experience: '28 years',
     researchArea: ['Condensed Matter Physics', 'Micromagnetic simulation', 'Magnetism', 'Semiconductors'],
     email: 'saswati.barman@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Dr. Subarna Datta',
@@ -19,6 +21,7 @@ const faculties = [
     experience: '2 year',
     researchArea: ['Experimental and theoretical condensed matter physics and material science.'],
     email: 'subarna.datta@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Dr. Soumyadipta Pal',
@@ -27,6 +30,7 @@ const faculties = [
     experience: '9 years',
     researchArea: ['Condensed Matter Physics and Material Science'],
     email: 'soumyadipta.pal@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Dr. Arnab Basu',
@@ -35,6 +39,7 @@ const faculties = [
     experience: '8 years',
     researchArea: ['Theoretical Condensed Matter Physics'],
     email: 'arnab.basu@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Dr. Ranabir Banik',
@@ -43,6 +48,7 @@ const faculties = [
     experience: '5 years',
     researchArea: ['Nuclear Structure Physics', 'Gamma Ray Spectroscopy', 'Semiconductor detectors'],
     email: 'ranabir.banik@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Dr. Saikat Chakraborty',
@@ -51,6 +57,7 @@ const faculties = [
     experience: '7 year',
     researchArea: ['Nuclear Physics'],
     email: 'saikat@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Mr. Sayan Paul',
@@ -59,6 +66,7 @@ const faculties = [
     experience: '3 years',
     researchArea: ['Condensed Matter Physics', 'X-Ray and Crystallography'],
     email: 'sayan.paul@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Mr. Amit Nandi',
@@ -67,6 +75,7 @@ const faculties = [
     experience: '11 years',
     researchArea: ['--'],
     email: 'amit.nandi@iem.edu.in',
+    imageUrl: null,
   },
   {
     name: 'Prof. Kaustav Pal',
@@ -75,6 +84,7 @@ const faculties = [
     experience: '--',
     researchArea: ['--'],
     email: '',
+    imageUrl: null,
   },
   {
     name: 'Prof. Koyel Ganguly (KG)',
@@ -83,6 +93,7 @@ const faculties = [
     experience: '--',
     researchArea: ['--'],
     email: '',
+    imageUrl: null,
   },
   {
     name: 'Prof. Sangeeta Das (SND)',
@@ -91,6 +102,7 @@ const faculties = [
     experience: '--',
     researchArea: ['--'],
     email: '',
+    imageUrl: null,
   },
 ];
 
@@ -118,8 +130,12 @@ export default function FacultiesPage() {
             </div>
           )}
           <CardHeader className="text-center flex-grow items-center pt-6">
-            <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4">
-              <User className="w-16 h-16 text-muted-foreground" />
+             <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4 overflow-hidden">
+                {faculty.imageUrl ? (
+                    <Image src={faculty.imageUrl} alt={faculty.name} width={128} height={128} className="w-full h-full object-cover" />
+                ) : (
+                    <User className="w-16 h-16 text-muted-foreground" />
+                )}
             </div>
             <CardTitle className="font-headline text-xl">{faculty.name}</CardTitle>
             <CardDescription>{faculty.designation}{faculty.qualification ? ` - ${faculty.qualification}` : ''}</CardDescription>
