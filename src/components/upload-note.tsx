@@ -18,6 +18,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, Upload } from 'lucide-react';
+import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 
 const ACCEPTED_FILE_TYPES = [
   'application/pdf',
@@ -35,6 +36,7 @@ const formSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters.'),
   author: z.string().min(3, 'Author name must be at least 3 characters.'),
   topic: z.string().min(3, 'Topic must be at least 3 characters.'),
+  noteType: z.enum(['theory', 'lab'], { required_error: 'You need to select a note type.' }),
   file: z
     .any()
     .refine((files) => files?.length === 1, 'File is required.')
@@ -56,6 +58,7 @@ export function UploadNote() {
       title: '',
       author: '',
       topic: '',
+      noteType: 'theory',
     },
   });
 
@@ -71,6 +74,7 @@ export function UploadNote() {
       title: values.title,
       author: values.author,
       topic: values.topic,
+      noteType: values.noteType,
       fileName: values.file[0]?.name,
       fileType: values.file[0]?.type,
       fileSize: values.file[0]?.size,
@@ -137,6 +141,36 @@ export function UploadNote() {
                   <FormLabel>Topic</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g., Electromagnetism" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+             <FormField
+              control={form.control}
+              name="noteType"
+              render={({ field }) => (
+                <FormItem className="space-y-3">
+                  <FormLabel>Note Type</FormLabel>
+                  <FormControl>
+                    <RadioGroup
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                      className="flex space-x-4"
+                    >
+                      <FormItem className="flex items-center space-x-2 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="theory" />
+                        </FormControl>
+                        <FormLabel className="font-normal">Theory</FormLabel>
+                      </FormItem>
+                      <FormItem className="flex items-center space-x-2 space-y-0">
+                        <FormControl>
+                          <RadioGroupItem value="lab" />
+                        </FormControl>
+                        <FormLabel className="font-normal">Laboratory</FormLabel>
+                      </FormItem>
+                    </RadioGroup>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
