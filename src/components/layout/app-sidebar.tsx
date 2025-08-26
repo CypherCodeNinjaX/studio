@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users } from 'lucide-react';
+import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users, Globe } from 'lucide-react';
 import { Sidebar, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
 import { IEMLogo } from '@/components/iem-logo';
 
@@ -14,6 +14,7 @@ const menuItems = [
   { href: '/notes', label: 'Notes', icon: Notebook },
   { href: '/lab-experiments', label: 'Lab Experiments', icon: FlaskConical },
   { href: '/contact', label: 'Contact', icon: Mail },
+  { href: 'https://iem.edu.in/', label: 'Official Website', icon: Globe },
 ];
 
 export function AppSidebar() {
@@ -28,20 +29,35 @@ export function AppSidebar() {
         </Link>
       </SidebarHeader>
       <SidebarMenu>
-        {menuItems.map((item) => (
-          <SidebarMenuItem key={item.href}>
-            <SidebarMenuButton
-              asChild
-              isActive={pathname === item.href}
-              tooltip={item.label}
-            >
-              <Link href={item.href}>
-                <item.icon />
-                <span>{item.label}</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        ))}
+        {menuItems.map((item) => {
+          const isExternal = item.href.startsWith('http');
+          const content = (
+            <>
+              <item.icon />
+              <span>{item.label}</span>
+            </>
+          );
+
+          return (
+            <SidebarMenuItem key={item.href}>
+              <SidebarMenuButton
+                asChild
+                isActive={!isExternal && pathname === item.href}
+                tooltip={item.label}
+              >
+                {isExternal ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">
+                    {content}
+                  </a>
+                ) : (
+                  <Link href={item.href}>
+                    {content}
+                  </Link>
+                )}
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          );
+        })}
       </SidebarMenu>
     </Sidebar>
   );
