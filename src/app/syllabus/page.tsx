@@ -6,7 +6,6 @@ const syllabus = {
   theory: [
     { title: 'Physics I (PH101)', code: 'PH101', format: 'PDF', fileUrl: '#' },
     { title: 'Physics II (PH201)', code: 'PH201', format: 'PDF', fileUrl: '#' },
-    { title: 'Quantum Mechanics (PH301)', code: 'PH301', format: 'Word', fileUrl: '#' },
   ],
   lab: [
     { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: '#' },
