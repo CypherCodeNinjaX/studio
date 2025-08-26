@@ -4,12 +4,12 @@ import { Mail } from 'lucide-react';
 
 const faculties = [
   {
-    name: 'Dr. Anirban Ghosh',
-    designation: 'Professor',
-    qualification: 'Ph.D. in Condensed Matter Physics',
-    experience: '15+ Years',
-    researchArea: ['Nanomaterials', 'Spintronics'],
-    email: 'anirban.ghosh@iem.edu.in',
+    name: 'Prof. Dr. Saswati Barman',
+    designation: 'Research Professor',
+    qualification: 'Ph.D',
+    experience: '28 years',
+    researchArea: ['Condensed Matter Physics', 'Micromagnetic simulation', 'Magnetism', 'Semiconductors'],
+    email: 'saswati.barman@iem.edu.in',
   },
   {
     name: 'Prof. Subrata Das',
