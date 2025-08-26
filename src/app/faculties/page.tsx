@@ -76,12 +76,12 @@ const faculties = [
     email: '',
   },
   {
-    name: 'Dr. Sandeep Reddy',
-    designation: 'Assistant Professor',
-    qualification: 'Ph.D. in Acoustics',
-    experience: '6 Years',
-    researchArea: ['Ultrasonics', 'Noise Control'],
-    email: 'sandeep.reddy@iem.edu.in',
+    name: 'Prof. Koyel Ganguly (KG)',
+    designation: 'Professor',
+    qualification: '',
+    experience: '--',
+    researchArea: ['--'],
+    email: '',
   },
   {
     name: 'Dr. Neha Kapoor',
