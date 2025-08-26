@@ -52,12 +52,12 @@ const faculties = [
     email: 'saikat@iem.edu.in',
   },
   {
-    name: 'Dr. Sneha Verma',
-    designation: 'Assistant Professor',
-    qualification: 'Ph.D. in Biophysics',
-    experience: '7 Years',
-    researchArea: ['Molecular Dynamics', 'Protein Folding'],
-    email: 'sneha.verma@iem.edu.in',
+    name: 'Mr. Sayan Paul',
+    designation: 'Technical Assistant',
+    qualification: 'M.Sc, Ph.D (Perusing)',
+    experience: '3 years',
+    researchArea: ['Condensed Matter Physics', 'X-Ray and Crystallography'],
+    email: 'sayan.paul@iem.edu.in',
   },
   {
     name: 'Dr. Vijay Singh',
