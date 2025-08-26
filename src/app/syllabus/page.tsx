@@ -5,8 +5,8 @@ import { UploadSyllabus } from '@/components/upload-syllabus';
 import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const syllabus: any[] = [
-  // { title: 'PHYSICS THEORY SYLLABUS', code: 'BSCPH101', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3' },
-  // { title: 'PHYSICS LAB SYLLABUS', code: 'BSCPH191', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt' },
+  { title: 'PHYSICS THEORY SYLLABUS', code: 'BSCPH101', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3', type: 'theory' },
+  { title: 'PHYSICS LAB SYLLABUS', code: 'BSCPH191', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt', type: 'lab' },
 ];
 
 export default function SyllabusPage() {
