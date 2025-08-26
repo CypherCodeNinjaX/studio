@@ -4,12 +4,6 @@ import { Button } from '@/components/ui/button';
 import { UploadAssignment } from '@/components/upload-assignment';
 
 const assignments: any[] = [
-  { 
-    title: 'Assignment 1: Kinematics', 
-    description: 'Solve the problems related to one-dimensional motion.', 
-    dueDate: '2024-09-15',
-    fileUrl: '#'
-  },
 ];
 
 export default function AssignmentsPage() {
