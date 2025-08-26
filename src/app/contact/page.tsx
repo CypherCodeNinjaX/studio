@@ -34,7 +34,7 @@ export default function ContactPage() {
             <div>
               <h3 className="font-semibold">Email</h3>
               <p className="text-muted-foreground">
-                <a href="mailto:admissions@iem.edu.in" className="hover:underline text-primary">admissions@iem.edu.in</a>
+                <a href="mailto:bsh@iem.edu.in" className="hover:underline text-primary">bsh@iem.edu.in</a>
               </p>
             </div>
           </div>
