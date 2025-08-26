@@ -28,12 +28,12 @@ const faculties = [
     email: 'soumyadipta.pal@iem.edu.in',
   },
   {
-    name: 'Dr. Rajesh Kumar',
-    designation: 'Assistant Professor',
-    qualification: 'Ph.D. in High Energy Physics',
-    experience: '8 Years',
-    researchArea: ['Particle Physics', 'String Theory'],
-    email: 'rajesh.kumar@iem.edu.in',
+    name: 'Prof. Dr. Arnab Basu',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D',
+    experience: '8 years',
+    researchArea: ['Theoretical Condensed Matter Physics'],
+    email: 'arnab.basu@iem.edu.in',
   },
   {
     name: 'Dr. Meena Iyer',
