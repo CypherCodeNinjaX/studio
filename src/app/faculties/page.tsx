@@ -44,12 +44,12 @@ const faculties = [
     email: 'ranabir.banik@iem.edu.in',
   },
   {
-    name: 'Prof. Alok Nath',
-    designation: 'Professor',
-    qualification: 'M.Tech in Nuclear Engineering',
-    experience: '18 Years',
-    researchArea: ['Nuclear Reactor Physics'],
-    email: 'alok.nath@iem.edu.in',
+    name: 'Prof. Dr. Saikat Chakraborty',
+    designation: 'Associate Professor',
+    qualification: 'Ph.D',
+    experience: '7 year',
+    researchArea: ['Nuclear Physics'],
+    email: 'saikat@iem.edu.in',
   },
   {
     name: 'Dr. Sneha Verma',
