@@ -4,7 +4,7 @@ import { Download, FileText } from 'lucide-react';
 
 const syllabus = {
   theory: [
-    { title: 'Physics I (PH101)', code: 'PH101', format: 'PDF', fileUrl: '#' },
+    { title: 'Physics I (PH101)', code: 'PH101', format: 'PDF', fileUrl: 'https://drive.google.com/file/d/1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3/view?usp=drivesdk' },
   ],
   lab: [
     { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: '#' },
