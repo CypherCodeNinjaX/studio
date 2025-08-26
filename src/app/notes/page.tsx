@@ -1,7 +1,9 @@
 import { SemanticSearch } from '@/components/semantic-search';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { NotebookText } from 'lucide-react';
+import { NotebookText, Pencil, Trash2 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { UploadNote } from '@/components/upload-note';
+import { Button } from '@/components/ui/button';
 
 
 const theoryNotes: any[] = [
@@ -14,7 +16,7 @@ const labNotes: any[] = [
 
 
 export default function NotesPage() {
-  const isFaculty = false; // Placeholder for future authentication
+  const isFaculty = true; // Placeholder for future authentication
 
   return (
     <div className="space-y-8">
@@ -34,8 +36,7 @@ export default function NotesPage() {
                 <TabsTrigger value="theory">Theory Notes</TabsTrigger>
                 <TabsTrigger value="lab">Laboratory Notes</TabsTrigger>
               </TabsList>
-              {/* The UploadNote component will be shown conditionally in a real app */}
-              {/* <UploadNote /> */}
+              {isFaculty && <UploadNote />}
             </div>
           </div>
           <TabsContent value="theory">
@@ -49,6 +50,18 @@ export default function NotesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {theoryNotes.map((note, index) => (
                       <Card key={index} className="hover:shadow-lg transition-shadow relative group">
+                        {isFaculty && (
+                            <div className="absolute top-2 right-2 z-10 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <Button variant="outline" size="icon" className="h-8 w-8 bg-background/80 backdrop-blur-sm">
+                                    <Pencil className="w-4 h-4" />
+                                    <span className="sr-only">Edit</span>
+                                </Button>
+                                <Button variant="destructive" size="icon" className="h-8 w-8">
+                                    <Trash2 className="w-4 h-4" />
+                                    <span className="sr-only">Delete</span>
+                                </Button>
+                            </div>
+                        )}
                         <CardHeader>
                           <div className="flex items-start justify-between">
                             <CardTitle>{note.title}</CardTitle>
@@ -64,7 +77,9 @@ export default function NotesPage() {
                   </div>
                 ) : (
                    <div className="text-center py-12">
-                     <p className="text-muted-foreground">No theory notes have been uploaded yet.</p>
+                     <p className="text-muted-foreground">
+                        {isFaculty ? 'Click "Upload Note" to add the first theory note.' : 'No theory notes have been uploaded yet.'}
+                    </p>
                    </div>
                 )}
               </CardContent>
@@ -81,6 +96,18 @@ export default function NotesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {labNotes.map((note, index) => (
                       <Card key={index} className="hover:shadow-lg transition-shadow relative group">
+                        {isFaculty && (
+                            <div className="absolute top-2 right-2 z-10 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <Button variant="outline" size="icon" className="h-8 w-8 bg-background/80 backdrop-blur-sm">
+                                    <Pencil className="w-4 h-4" />
+                                    <span className="sr-only">Edit</span>
+                                </Button>
+                                <Button variant="destructive" size="icon" className="h-8 w-8">
+                                    <Trash2 className="w-4 h-4" />
+                                    <span className="sr-only">Delete</span>
+                                </Button>
+                            </div>
+                        )}
                         <CardHeader>
                           <div className="flex items-start justify-between">
                             <CardTitle>{note.title}</CardTitle>
@@ -96,7 +123,9 @@ export default function NotesPage() {
                   </div>
                 ) : (
                   <div className="text-center py-12">
-                    <p className="text-muted-foreground">No laboratory notes have been uploaded yet.</p>
+                    <p className="text-muted-foreground">
+                        {isFaculty ? 'Click "Upload Note" to add the first laboratory note.' : 'No laboratory notes have been uploaded yet.'}
+                    </p>
                   </div>
                 )}
               </CardContent>

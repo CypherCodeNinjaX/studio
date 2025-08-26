@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, User } from 'lucide-react';
+import { Mail, User, Pencil, Trash2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const faculties = [
   {
@@ -94,7 +95,7 @@ const faculties = [
 ];
 
 export default function FacultiesPage() {
-  const isFaculty = false; // Placeholder for future authentication
+  const isFaculty = true; // Placeholder for future authentication
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -104,6 +105,18 @@ export default function FacultiesPage() {
           className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in-up relative group"
           style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
         >
+          {isFaculty && (
+            <div className="absolute top-2 right-2 z-10 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <Button variant="outline" size="icon" className="h-8 w-8 bg-background/80 backdrop-blur-sm">
+                <Pencil className="w-4 h-4" />
+                <span className="sr-only">Edit</span>
+              </Button>
+              <Button variant="destructive" size="icon" className="h-8 w-8">
+                <Trash2 className="w-4 h-4" />
+                <span className="sr-only">Delete</span>
+              </Button>
+            </div>
+          )}
           <CardHeader className="text-center flex-grow items-center pt-6">
             <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4">
               <User className="w-16 h-16 text-muted-foreground" />
