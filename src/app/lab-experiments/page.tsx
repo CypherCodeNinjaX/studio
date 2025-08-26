@@ -38,7 +38,7 @@ const experiments = [
     {
       title: 'Modulus of Rigidity (Static)',
       description: 'To determine the Modulus of rigidity of a material of a rod by static method.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=CgmHlxn4m5A',
+      youtubeUrl: 'https://yt.openinapp.co/ax1vp',
     },
     {
       title: 'Modulus of Rigidity (Dynamic)',
@@ -93,7 +93,7 @@ const experiments = [
     {
       title: 'Compton Scattering',
       description: 'Demonstration of the Compton scattering of gamma rays.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=JtV5Gv75gws',
+      youtubeUrl: 'https://www.youtube.com/watch?v=JtV5Gv7Sgws',
     },
     {
       title: 'Optical Emission Spectra',
