@@ -13,6 +13,8 @@ const pageTitles: { [key: string]: string } = {
   '/assignments': 'Assignments',
   '/lab-experiments': 'Lab Experiments',
   '/contact': 'Contact Us',
+  '/ai-agent': 'AI Agent',
+  '/help': 'Help Center',
 };
 
 export function AppHeader() {
