@@ -30,7 +30,7 @@ export default function AboutPage() {
           </CardContent>
         </Card>
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <Image src="https://picsum.photos/600/400" alt="University campus" data-ai-hint="university campus" width={600} height={400} className="w-full h-auto object-cover" />
+          <Image src="https://storage.googleapis.com/aifire-us-app-sandbox-dev-02-a/user-assets/e60742d4-dd68-4171-8409-90696f5b7454_optim_4096.jpg" alt="IEM college campus" data-ai-hint="college campus" width={600} height={400} className="w-full h-auto object-cover" />
         </div>
       </div>
       
