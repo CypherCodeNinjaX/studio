@@ -4,11 +4,11 @@ import { NotebookText, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { UploadNote } from '@/components/upload-note';
 
-const notes = [
-  { title: 'Introduction to Electrodynamics', author: 'Dr. Anirban Ghosh', topic: 'Electromagnetism' },
-  { title: 'Lecture Notes on Quantum Mechanics', author: 'Prof. Subrata Das', topic: 'Quantum Physics' },
-  { title: 'Thermodynamics Cheat Sheet', author: 'Dr. Priya Sharma', topic: 'Thermodynamics' },
-  { title: 'Notes on Special Relativity', author: 'Dr. Rajesh Kumar', topic: 'Relativity' },
+const notes: any[] = [
+  // { title: 'Introduction to Electrodynamics', author: 'Dr. Anirban Ghosh', topic: 'Electromagnetism' },
+  // { title: 'Lecture Notes on Quantum Mechanics', author: 'Prof. Subrata Das', topic: 'Quantum Physics' },
+  // { title: 'Thermodynamics Cheat Sheet', author: 'Dr. Priya Sharma', topic: 'Thermodynamics' },
+  // { title: 'Notes on Special Relativity', author: 'Dr. Rajesh Kumar', topic: 'Relativity' },
 ];
 
 export default function NotesPage() {
@@ -24,22 +24,30 @@ export default function NotesPage() {
           <h2 className="font-headline text-2xl font-bold">Available Notes</h2>
           <UploadNote />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {notes.map((note, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <CardTitle>{note.title}</CardTitle>
-                  <NotebookText className="w-6 h-6 text-muted-foreground"/>
-                </div>
-                <CardDescription>By {note.author}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm font-semibold text-primary">{note.topic}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {notes.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {notes.map((note, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle>{note.title}</CardTitle>
+                    <NotebookText className="w-6 h-6 text-muted-foreground"/>
+                  </div>
+                  <CardDescription>By {note.author}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm font-semibold text-primary">{note.topic}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-muted-foreground">No notes have been uploaded yet. Use the "Upload Note" button to add a new note.</p>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   );
