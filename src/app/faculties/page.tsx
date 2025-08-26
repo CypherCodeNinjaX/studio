@@ -4,7 +4,7 @@ import { Mail } from 'lucide-react';
 
 const faculties = [
   {
-    name: 'Dr. Anirban Ghosh',
+    name: 'Prof. Dr. Saswati Barman',
     qualification: 'Ph.D. in Condensed Matter Physics',
     experience: '15+ Years',
     researchArea: 'Nanomaterials, Spintronics',
