@@ -4,10 +4,10 @@ import { Download, FileText } from 'lucide-react';
 
 const syllabus = {
   theory: [
-    { title: 'Physics I (PH101)', code: 'PH101', format: 'PDF', fileUrl: 'https://drive.google.com/file/d/1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3/view?usp=drivesdk' },
+    { title: 'Physics I (PH101)', code: 'PH101', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3' },
   ],
   lab: [
-    { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: 'https://drive.google.com/file/d/1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt/view?usp=drivesdk' },
+    { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt' },
   ],
 };
 
@@ -28,7 +28,7 @@ export default function SyllabusPage() {
                   </div>
                 </div>
                 <Button asChild size="icon" variant="ghost">
-                  <a href={doc.fileUrl} download>
+                  <a href={doc.fileUrl} download target="_blank" rel="noopener noreferrer">
                     <Download className="w-5 h-5" />
                     <span className="sr-only">Download</span>
                   </a>
@@ -52,7 +52,7 @@ export default function SyllabusPage() {
                   </div>
                 </div>
                 <Button asChild size="icon" variant="ghost">
-                  <a href={doc.fileUrl} download>
+                  <a href={doc.fileUrl} download target="_blank" rel="noopener noreferrer">
                     <Download className="w-5 h-5" />
                     <span className="sr-only">Download</span>
                   </a>
