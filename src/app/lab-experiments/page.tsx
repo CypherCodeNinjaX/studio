@@ -28,7 +28,7 @@ const experiments = [
     {
       title: 'Band-gap of a Semiconductor',
       description: 'Determination of the band-gap of a semiconductor by measuring the resistivity at different temperatures by four-probe method.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=sS0g2n5JMNU',
+      youtubeUrl: 'https://yt.openinapp.co/mk7bx',
     },
     {
       title: "Carey Foster's Bridge",
