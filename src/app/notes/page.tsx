@@ -1,6 +1,8 @@
 import { SemanticSearch } from '@/components/semantic-search';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { NotebookText } from 'lucide-react';
+import { NotebookText, Upload } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { UploadNote } from '@/components/upload-note';
 
 const notes = [
   { title: 'Introduction to Electrodynamics', author: 'Dr. Anirban Ghosh', topic: 'Electromagnetism' },
@@ -18,7 +20,10 @@ export default function NotesPage() {
       />
 
       <div>
-        <h2 className="font-headline text-2xl font-bold mb-4">Available Notes</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-headline text-2xl font-bold">Available Notes</h2>
+          <UploadNote />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {notes.map((note, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
