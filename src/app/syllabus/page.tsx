@@ -7,7 +7,7 @@ const syllabus = {
     { title: 'PHYSICS THEORY SYLLABUS', code: 'BSCPH101', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1ThzzF_MSiaQxO6Aea4BA-2icn74TPyA3' },
   ],
   lab: [
-    { title: 'Physics I Lab (PH191)', code: 'PH191', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt' },
+    { title: 'PHYSICS LAB SYLLABUS', code: 'BSCPH191', format: 'PDF', fileUrl: 'https://drive.google.com/uc?export=download&id=1qKtKvVNMnu0v1-NDF6nkg0ulKnw10Nbt' },
   ],
 };
 
