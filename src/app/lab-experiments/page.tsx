@@ -18,7 +18,7 @@ const experiments = [
     {
       title: 'Franck-Hertz Experiment',
       description: 'Determination of the excitation potential of a given gas by Franck-Hertz experiment.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=2p99uCg--o4',
+      youtubeUrl: 'https://yt.openinapp.co/znkc2',
     },
     {
       title: "Young's Modulus",
