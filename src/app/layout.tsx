@@ -4,17 +4,34 @@ import { Toaster } from '@/components/ui/toaster';
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/layout/app-sidebar';
 import { AppHeader } from '@/components/layout/app-header';
+import { KonamiEasterEgg } from '@/components/konami-easter-egg';
 
 export const metadata: Metadata = {
   title: 'IEM Physics App',
   description: 'A comprehensive app for Physics at IEM.',
 };
 
+const developerGreeting = `
+██╗███████╗███╗   ███╗     ██████╗ ██╗  ██╗██╗   ██╗██╗███████╗
+██║██╔════╝████╗ ████║    ██╔═══██╗╚██╗██╔╝██║   ██║██║██╔════╝
+██║█████╗  ██╔████╔██║    ██║   ██║ ╚███╔╝ ██║   ██║██║█████╗
+██║██╔══╝  ██║╚██╔╝██║    ██║   ██║ ██╔██╗ ██║   ██║██║██╔══╝
+██║███████╗██║ ╚═╝ ██║    ╚██████╔╝██╔╝ ██╗╚██████╔╝██║███████╗
+╚═╝╚══════╝╚═╝     ╚═╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝╚══════╝
+
+Welcome, fellow developer! Thanks for checking out the code.
+Let's build something amazing together.
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (typeof window !== 'undefined') {
+    console.log(developerGreeting);
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -34,6 +51,7 @@ export default function RootLayout({
             </SidebarInset>
         </SidebarProvider>
         <Toaster />
+        <KonamiEasterEgg />
       </body>
     </html>
   );

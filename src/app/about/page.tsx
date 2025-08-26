@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <Card>
         <CardHeader>
           <CardTitle className="font-headline text-3xl">About the Department</CardTitle>

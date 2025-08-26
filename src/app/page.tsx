@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <section className="relative w-full h-[50vh] rounded-lg overflow-hidden shadow-lg">
         <Image
           src="https://picsum.photos/1200/800"

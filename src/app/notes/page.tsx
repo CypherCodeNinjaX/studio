@@ -13,7 +13,7 @@ const notes: any[] = [
 
 export default function NotesPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <SemanticSearch 
         documentType="notes"
         placeholder="e.g., Maxwell's equations, Schrodinger's cat..."

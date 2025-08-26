@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function ContactPage() {
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid md:grid-cols-2 gap-8 animate-fade-in-up">
       <Card>
         <CardHeader>
           <CardTitle className="font-headline text-2xl">Get in Touch</CardTitle>

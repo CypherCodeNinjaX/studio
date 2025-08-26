@@ -89,7 +89,7 @@ const experiments = [
 
 export default function LabExperimentsPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <SemanticSearch
         documentType="labExperiments"
         placeholder="e.g., Young's double slit, Hall effect..."

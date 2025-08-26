@@ -95,7 +95,7 @@ const faculties = [
 
 export default function FacultiesPage() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up">
       {faculties.map((faculty, index) => (
         <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
           <CardHeader className="text-center flex-grow items-center">

@@ -13,7 +13,7 @@ const syllabus = {
 
 export default function SyllabusPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in-up">
       <div>
         <h2 className="font-headline text-2xl font-bold mb-4">Theory Syllabus</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
