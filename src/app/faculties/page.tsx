@@ -12,12 +12,12 @@ const faculties = [
     email: 'saswati.barman@iem.edu.in',
   },
   {
-    name: 'Prof. Subrata Das',
+    name: 'Prof. Dr. Subarna Datta',
     designation: 'Associate Professor',
-    qualification: 'M.Sc. in Theoretical Physics',
-    experience: '12 Years',
-    researchArea: ['Quantum Field Theory', 'Cosmology'],
-    email: 'subrata.das@iem.edu.in',
+    qualification: 'Ph.D',
+    experience: '2 year',
+    researchArea: ['Experimental and theoretical condensed matter physics and material science.'],
+    email: 'subarna.datta@iem.edu.in',
   },
   {
     name: 'Dr. Priya Sharma',
