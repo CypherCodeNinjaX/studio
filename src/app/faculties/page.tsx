@@ -68,12 +68,12 @@ const faculties = [
     email: 'amit.nandi@iem.edu.in',
   },
   {
-    name: 'Prof. Ritu Bose',
-    designation: 'Associate Professor',
-    qualification: 'M.Sc. in Solid State Physics',
-    experience: '14 Years',
-    researchArea: ['Semiconductor Devices'],
-    email: 'ritu.bose@iem.edu.in',
+    name: 'Prof. Kaustav Pal',
+    designation: '',
+    qualification: '',
+    experience: '',
+    researchArea: [],
+    email: '',
   },
   {
     name: 'Dr. Sandeep Reddy',
@@ -100,28 +100,40 @@ export default function FacultiesPage() {
         <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle className="font-headline text-xl">{faculty.name}</CardTitle>
-            <CardDescription>{faculty.designation} - {faculty.qualification}</CardDescription>
+            <CardDescription>{faculty.designation}{faculty.qualification ? ` - ${faculty.qualification}` : ''}</CardDescription>
           </CardHeader>
           <CardContent className="flex-grow space-y-4">
-            <div>
-              <p className="text-sm font-semibold text-muted-foreground">Experience</p>
-              <p>{faculty.experience}</p>
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-muted-foreground">Research Area</p>
-              <div className="flex flex-wrap gap-2">
-                {faculty.researchArea.map((area) => (
-                    <Badge key={area} variant="secondary">{area}</Badge>
-                ))}
+            {faculty.experience && (
+              <div>
+                <p className="text-sm font-semibold text-muted-foreground">Experience</p>
+                <p>{faculty.experience}</p>
               </div>
-            </div>
+            )}
+            {faculty.researchArea && faculty.researchArea.length > 0 && faculty.researchArea[0] !== '--' && (
+              <div>
+                <p className="text-sm font-semibold text-muted-foreground">Research Area</p>
+                <div className="flex flex-wrap gap-2">
+                  {faculty.researchArea.map((area) => (
+                      <Badge key={area} variant="secondary">{area}</Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+             {faculty.researchArea && faculty.researchArea.length > 0 && faculty.researchArea[0] === '--' && (
+              <div>
+                <p className="text-sm font-semibold text-muted-foreground">Research Area</p>
+                <p>--</p>
+              </div>
+            )}
           </CardContent>
-          <div className="p-6 pt-0">
-             <a href={`mailto:${faculty.email}`} className="text-sm flex items-center gap-2 text-primary hover:underline">
-              <Mail className="w-4 h-4" />
-              {faculty.email}
-            </a>
-          </div>
+          {faculty.email && (
+            <div className="p-6 pt-0">
+               <a href={`mailto:${faculty.email}`} className="text-sm flex items-center gap-2 text-primary hover:underline">
+                <Mail className="w-4 h-4" />
+                {faculty.email}
+              </a>
+            </div>
+          )}
         </Card>
       ))}
     </div>
