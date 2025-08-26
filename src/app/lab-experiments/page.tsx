@@ -108,7 +108,7 @@ const experiments = [
     {
       title: 'Demonstration of Slide/Vernier Callipers',
       description: 'To understand the working principle and measurement technique of slide and vernier callipers.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=4b8x9vN9d-4',
+      youtubeUrl: 'https://yt.openinapp.co/8a5s4',
     },
     {
       title: 'Demonstration of Screw Gauge',
