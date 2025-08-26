@@ -1,9 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { FileText, Calendar, Download, MoreVertical, Pencil, Trash2 } from 'lucide-react';
-import { UploadAssignment } from '@/components/upload-assignment';
+import { FileText, Calendar, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 const assignments: any[] = [
   // Example assignment
@@ -16,6 +13,8 @@ const assignments: any[] = [
 ];
 
 export default function AssignmentsPage() {
+  const isFaculty = false; // Placeholder for future authentication
+
   return (
     <div className="space-y-8">
       <div className="flex justify-between items-center animate-fade-in-up">
@@ -23,7 +22,8 @@ export default function AssignmentsPage() {
           <h1 className="font-headline text-3xl font-bold">Assignments</h1>
           <p className="text-muted-foreground">View and download course assignments uploaded by faculty.</p>
         </div>
-        <UploadAssignment />
+        {/* The UploadAssignment component will be shown conditionally in a real app */}
+        {/* <UploadAssignment /> */}
       </div>
 
       <div className="animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
@@ -31,25 +31,8 @@ export default function AssignmentsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {assignments.map((assignment, index) => (
               <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow relative group">
-                 <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="absolute top-4 right-4 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <MoreVertical className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
-                    <DropdownMenuItem>
-                      <Pencil className="mr-2 h-4 w-4" />
-                      <span>Edit</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem className="text-destructive">
-                      <Trash2 className="mr-2 h-4 w-4" />
-                      <span>Delete</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
                 <CardHeader>
-                  <div className="flex items-start justify-between pr-10">
+                  <div className="flex items-start justify-between">
                     <CardTitle>{assignment.title}</CardTitle>
                     <FileText className="w-6 h-6 text-muted-foreground"/>
                   </div>

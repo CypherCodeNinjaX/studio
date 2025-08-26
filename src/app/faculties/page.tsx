@@ -1,8 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, User, MoreVertical, Pencil, Trash2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Mail, User } from 'lucide-react';
 
 const faculties = [
   {
@@ -96,6 +94,8 @@ const faculties = [
 ];
 
 export default function FacultiesPage() {
+  const isFaculty = false; // Placeholder for future authentication
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {faculties.map((faculty, index) => (
@@ -104,24 +104,6 @@ export default function FacultiesPage() {
           className="flex flex-col hover:shadow-lg transition-shadow animate-fade-in-up relative group"
           style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
         >
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="absolute top-4 right-4 h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                <MoreVertical className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>
-                <Pencil className="mr-2 h-4 w-4" />
-                <span>Edit</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-destructive">
-                <Trash2 className="mr-2 h-4 w-4" />
-                <span>Delete</span>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           <CardHeader className="text-center flex-grow items-center pt-6">
             <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4">
               <User className="w-16 h-16 text-muted-foreground" />
