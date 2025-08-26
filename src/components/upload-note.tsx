@@ -23,7 +23,9 @@ const formSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters.'),
   author: z.string().min(3, 'Author name must be at least 3 characters.'),
   topic: z.string().min(3, 'Topic must be at least 3 characters.'),
-  file: z.instanceof(FileList).refine((files) => files?.length === 1, 'File is required.'),
+  file: z
+    .any()
+    .refine((files) => files?.length === 1, 'File is required.')
 });
 
 export function UploadNote() {
