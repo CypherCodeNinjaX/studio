@@ -24,7 +24,7 @@ export function AppHeader() {
         <SidebarTrigger className="md:hidden" />
         <h1 className="font-headline text-xl font-bold">{title}</h1>
       </div>
-      <UEMLogo className="h-10 w-10 text-primary" />
+      <UEMLogo className="h-10 w-10" width={40} height={40} />
     </header>
   );
 }
