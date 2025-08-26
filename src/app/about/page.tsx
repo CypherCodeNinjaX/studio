@@ -36,7 +36,7 @@ export default function AboutPage() {
       
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="rounded-lg overflow-hidden shadow-lg order-last md:order-first">
-          <Image src="https://storage.googleapis.com/aifire-us-app-sandbox-dev-02-a/user-assets/e2b26c71-26c7-4603-96e0-94d7b7c53e8d" alt="IEM basketball court" data-ai-hint="basketball court" width={600} height={400} className="w-full h-auto object-cover" />
+          <Image src="https://storage.googleapis.com/aifire-us-app-sandbox-dev-02-a/user-assets/e2b26c71-26c7-4603-96e0-94d7b7c53e8d_optim_4096.jpg" alt="IEM basketball court" data-ai-hint="basketball court" width={600} height={400} className="w-full h-auto object-cover" />
         </div>
         <Card>
           <CardHeader>
