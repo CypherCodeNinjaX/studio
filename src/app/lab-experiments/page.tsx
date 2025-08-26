@@ -93,7 +93,7 @@ const experiments = [
     {
       title: 'Compton Scattering',
       description: 'Demonstration of the Compton scattering of gamma rays.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=JtV5Gv7Sgws',
+      youtubeUrl: 'https://www.youtube.com/watch?v=JtV5GvSgws',
     },
     {
       title: 'Optical Emission Spectra',
@@ -113,7 +113,7 @@ const experiments = [
     {
       title: 'Demonstration of Screw Gauge',
       description: 'To understand the working principle and measurement technique of a screw gauge.',
-      youtubeUrl: 'https://www.youtube.com/watch?v=6WDb-y0y3o4',
+      youtubeUrl: 'https://yt.openinapp.co/40bvj',
     },
   ];
 
