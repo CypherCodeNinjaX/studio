@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail } from 'lucide-react';
+import { Mail, User } from 'lucide-react';
 
 const faculties = [
   {
@@ -98,7 +98,10 @@ export default function FacultiesPage() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {faculties.map((faculty, index) => (
         <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
-          <CardHeader className="text-center flex-grow">
+          <CardHeader className="text-center flex-grow items-center">
+            <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center mb-4">
+              <User className="w-16 h-16 text-muted-foreground" />
+            </div>
             <CardTitle className="font-headline text-xl">{faculty.name}</CardTitle>
             <CardDescription>{faculty.designation}{faculty.qualification ? ` - ${faculty.qualification}` : ''}</CardDescription>
           </CardHeader>
