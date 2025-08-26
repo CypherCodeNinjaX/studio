@@ -105,6 +105,16 @@ const experiments = [
       description: 'Solve Schrodinger equation for a 1-dimensional infinite potential well and plot the wave function for ground state and first two excited states.',
       youtubeUrl: 'https://www.youtube.com/watch?v=U3F6n6h4A2E',
     },
+    {
+      title: 'Demonstration of Slide/Vernier Callipers',
+      description: 'To understand the working principle and measurement technique of slide and vernier callipers.',
+      youtubeUrl: 'https://www.youtube.com/watch?v=4b8x9vN9d-4',
+    },
+    {
+      title: 'Demonstration of Screw Gauge',
+      description: 'To understand the working principle and measurement technique of a screw gauge.',
+      youtubeUrl: 'https://www.youtube.com/watch?v=6WDb-y0y3o4',
+    },
   ];
 
 export default function LabExperimentsPage() {
