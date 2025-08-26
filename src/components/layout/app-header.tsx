@@ -12,6 +12,7 @@ const pageTitles: { [key: string]: string } = {
   '/notes': 'Notes & Materials',
   '/assignments': 'Assignments',
   '/lab-experiments': 'Lab Experiments',
+  '/youtube-channel': 'YouTube Channel',
   '/contact': 'Contact Us',
   '/ai-agent': 'AI Agent',
   '/help': 'Help Center',

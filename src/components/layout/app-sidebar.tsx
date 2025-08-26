@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users, Globe, ClipboardList, Bot, HelpCircle } from 'lucide-react';
+import { BookText, FlaskConical, Home, Info, Mail, Notebook, Users, Globe, ClipboardList, Bot, HelpCircle, Youtube } from 'lucide-react';
 import { Sidebar, SidebarContent, SidebarHeader, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarSeparator } from '@/components/ui/sidebar';
 import { IEMLogo } from '@/components/iem-logo';
 
@@ -14,6 +14,7 @@ const mainMenuItems = [
   { href: '/notes', label: 'Notes', icon: Notebook },
   { href: '/assignments', label: 'Assignments', icon: ClipboardList },
   { href: '/lab-experiments', label: 'Lab Experiments', icon: FlaskConical },
+  { href: '/youtube-channel', label: 'YouTube', icon: Youtube },
 ];
 
 const secondaryMenuItems = [
