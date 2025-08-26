@@ -107,7 +107,7 @@ const experiments = [
     },
     {
       title: 'Demonstration of Slide/Vernier Callipers',
-      description: 'To understand the working principle and measurement technique of slide and vernier callipers.',
+      description: 'slide or vernier',
       youtubeUrl: 'https://yt.openinapp.co/8a5s4',
     },
     {
