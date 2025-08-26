@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, User } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Mail } from 'lucide-react';
 
 const faculties = [
   {
@@ -98,18 +97,12 @@ export default function FacultiesPage() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {faculties.map((faculty, index) => (
-        <Card key={index} className="flex flex-col items-center pt-6 hover:shadow-lg transition-shadow">
-          <Avatar className="w-24 h-24 mb-4">
-            <AvatarImage src={`https://picsum.photos/seed/${faculty.name.replace(/\s/g, '')}/100`} alt={faculty.name} data-ai-hint="person portrait" />
-            <AvatarFallback>
-              <User className="w-12 h-12 text-muted-foreground" />
-            </AvatarFallback>
-          </Avatar>
-          <CardHeader className="text-center">
+        <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow">
+          <CardHeader className="text-center flex-grow">
             <CardTitle className="font-headline text-xl">{faculty.name}</CardTitle>
             <CardDescription>{faculty.designation}{faculty.qualification ? ` - ${faculty.qualification}` : ''}</CardDescription>
           </CardHeader>
-          <CardContent className="w-full flex-grow space-y-4 px-6">
+          <CardContent className="w-full space-y-4 px-6">
             {faculty.experience && (
               <div>
                 <p className="text-sm font-semibold text-muted-foreground">Experience</p>
