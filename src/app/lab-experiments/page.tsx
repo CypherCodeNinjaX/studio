@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { FlaskConical, PlayCircle, Pencil, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 import { UploadExperiment } from '@/components/upload-experiment';
+import { Download } from 'lucide-react';
 
 const experiments = [
     {
@@ -162,6 +163,12 @@ export default function LabExperimentsPage() {
           </div>
           <div className="flex items-center gap-4">
             {isFaculty && <UploadExperiment />}
+             <Button asChild>
+                <a href="https://openinapp.link/u0zgs" target="_blank" rel="noopener noreferrer">
+                    <Download className="mr-2 h-4 w-4" />
+                    Physics Lab Module
+                </a>
+            </Button>
             <Button asChild>
               <a href="https://vlab.amrita.edu/?sub=1" target="_blank" rel="noopener noreferrer">
                 <FlaskConical className="mr-2 h-4 w-4" />
