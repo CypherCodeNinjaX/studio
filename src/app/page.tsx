@@ -36,7 +36,7 @@ export default function Home() {
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card className="hover:shadow-lg transition-shadow duration-300">
+        <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
           <CardHeader>
             <CardTitle className="font-headline">Faculty Profiles</CardTitle>
             <CardDescription>Meet the brilliant minds shaping our department.</CardDescription>
@@ -48,7 +48,7 @@ export default function Home() {
             </Button>
           </CardContent>
         </Card>
-        <Card className="hover:shadow-lg transition-shadow duration-300">
+        <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
           <CardHeader>
             <CardTitle className="font-headline">Syllabus & Notes</CardTitle>
             <CardDescription>Stay ahead with course materials.</CardDescription>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-        <Card className="hover:shadow-lg transition-shadow duration-300">
+        <Card className="transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
           <CardHeader>
             <CardTitle className="font-headline">Lab Experiments</CardTitle>
             <CardDescription>Practical knowledge at your fingertips.</CardDescription>
